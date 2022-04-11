@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" > 
+	<script type="text/javascript" src="assets/js/respond.min.js"></script>
+	<script type="text/javascript" src="assets/js/modernizr-2.0.6.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.flexslider-min.js"></script>
+	
+	<title>Home</title>
+
+	<style>
+		
+		.info{
+			position: absolute; 
+			top: 400px;
+			left: 690px;
+			right: 170px;
+			text-align: justify;
+			font-size: 100%;
+		}
+
+
+		.icona {
+			cursor: pointer; 
+			 width: 35px;
+			 height: 5px;
+			 background-color: white;
+			 margin: 6px 0;
+			 position: relative;
+			 cursor: pointer;
+
+
+			-webkit-transition: background-color;
+			 -webkit-transition-duration: 0.5s;
+			 -webkit-transition-timing-function: ease-in;
+
+
+
+			-moz-transition: background-color;
+			 -moz-transition-duration: 0.5s;
+			 -moz-transition-timing-function: ease-in;
+
+
+
+			-ms-transition: background-color;
+			 -ms-transition-duration: 0.5s;
+			 -ms-transition-timing-function: ease-in;
+
+
+
+			-o-transition: background-color;
+			 -o-transition-duration: 0.5s;
+			 -o-transition-timing-function: ease-in;
+			}
+
+
+
+
+			.header{
+			 position: relative;
+			 width: 100%;
+			 height: 60px;
+			 background: fixed no-repeat center;
+			 background-size: cover;
+			 background-color: black; 
+			 }
+
+
+
+			.trasparenza{
+			 position: absolute;
+			 width: 100%;
+			 height: 100%;
+			 -webkit-transition-duration: 1.5s ;
+			 -webkit-transition-timing-function: easy-in;
+			 -moz-transition: opacity;
+			 -moz-transition-duration: 1.5s ;
+			 -moz-transition-timing-function: easy-in;
+			 -ms-transition: opacity;
+			 -ms-transition-duration: 1.5s ;
+			 -ms-transition-timing-function: easy-in;
+			 -o-transition: opacity;
+			 -o-transition-duration: 1.5s ;
+			 -o-transition-timing-function: easy-in;
+			 }
+
+
+
+			.trasparenza:hover{
+			 opacity: 0.4;
+			 }
+
+
+
+			.container{
+				position: absolute;
+				top: 15%;
+				left: 1%;;
+				background-color: black;
+			}
+
+
+
+			.container:hover .icona{
+			 background-color: white;
+			 cursor: pointer; 
+			}
+
+
+
+			.overlay {
+			 height: 100%;
+			 width: 0;
+			 position: fixed;
+			 z-index: 1;
+			 left: 0;
+			 top: 0;
+			 background-color: rgb(0,0,0);
+			 background-color: rgba(0,0,0, 0.9);
+			 overflow-x: hidden;
+			 transition: 0.5s;
+			}
+
+
+
+			.overlay-content {
+			 position: relative;
+			 top: 25%;
+			 width: 20%;
+			 text-align: left;
+			 margin-top: 30px;
+			 margin-left: 30px;
+			}
+
+
+
+			.overlay a {
+			 padding: 8px;
+			 text-decoration: none;
+			 font-size: 25px;
+			 color: #818181;
+			 display: block;
+			 transition: 0.3s;
+			}
+
+
+
+			.overlay a:hover, .overlay a:focus {
+			 color: #f1f1f1;
+			}
+
+
+
+			.overlay .closebtn {
+			 position: absolute;
+			 top: 20px;
+			 left: 295px;
+			 font-size: 60px;
+			}
+
+
+
+			@media screen and (max-height: 450px) {
+			 .overlay a {font-size: 20px}
+			 .overlay .closebtn {
+			 font-size: 40px;
+			 top: 15px;
+			 right: 35px;
+			 }
+			}	
+
+			/*TENDINA COI VIDEO*/
+
+			body{
+			 margin: 0;
+			 position: fixed; 
+		     width: 100%;
+
+			}
+			.i {
+			 width: 150px;
+			 height: 100px;
+			 background-color: white;
+			 margin: 6px 0;
+			 position: relative;
+			 cursor: pointer;
+			 text-align: center;
+
+
+
+
+			-webkit-transition: background-color;
+			 -webkit-transition-duration: 0.5s;
+			 -webkit-transition-timing-function: ease-in;
+
+
+
+			-moz-transition: background-color;
+			 -moz-transition-duration: 0.5s;
+			 -moz-transition-timing-function: ease-in;
+
+
+
+			-ms-transition: background-color;
+			 -ms-transition-duration: 0.5s;
+			 -ms-transition-timing-function: ease-in;
+
+
+
+			-o-transition: background-color;
+			 -o-transition-duration: 0.5s;
+			 -o-transition-timing-function: ease-in;
+			}
+
+
+
+
+			.t{
+			 position: absolute;
+			 width: 100%;
+			 height: 100%;
+			 opacity: 0.6;
+			 -webkit-transition: opacity;
+			 -webkit-transition-duration: 1.5s ;
+			 -webkit-transition-timing-function: easy-in;
+			 -moz-transition: opacity;
+			 -moz-transition-duration: 1.5s ;
+			 -moz-transition-timing-function: easy-in;
+			 -ms-transition: opacity;
+			 -ms-transition-duration: 1.5s ;
+			 -ms-transition-timing-function: easy-in;
+			 -o-transition: opacity;
+			 -o-transition-duration: 1.5s ;
+			 -o-transition-timing-function: easy-in;
+
+
+
+			}
+
+
+
+			.t:hover{
+			 opacity: 0.4;
+			 }
+
+
+
+			.c{
+			 position: absolute;
+			 bottom: -560px;
+			 left: 80%;
+			 width:35px;
+			}
+
+
+
+			.c:hover{
+			 margin-top: 0.5%;
+			 margin-left: 0.5%;
+			 border-radius:5%;
+			 border-color:black;
+			}
+
+			.c:hover .i{
+			 background-color: white;
+			}
+
+
+
+			.o {
+			 height: 100%;
+			 width: 0;
+			 position: fixed;
+			 z-index: 1;
+			 left: 0;
+			 top: 0;
+			 background-color: rgb(0,0,0);
+			 background-color: rgba(0,0,0, 0.9);
+			 overflow-x: hidden;
+			 transition: 0.5s;
+			}
+
+
+
+			.o-content {
+			 position: relative;
+			 top: 15%;
+			 width: 100%;
+			 margin-top: 20px;
+			}
+
+
+
+			.o a {
+			 padding: 8px;
+			 text-decoration: none;
+			 font-size: 36px;
+			 color: #818181;
+			 display: block;
+			 transition: 0.3s;
+			}
+
+
+
+			.o a:hover, .o a:focus {
+			 color: #f1f1f1;
+			}
+
+
+
+			.o .closeb {
+			 position: absolute;
+			 top: 20px;
+			 right: 45px;
+			 font-size: 60px;
+			}
+
+			#par{
+				position: relative;
+				top: 25%;
+			}
+
+	</style>
+</head>
+<body style="background-image: url('images/sfondo1.jpg')">
+	<div id="myNav" class="overlay">
+				 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				 <div class="overlay-content">
+					 <!--<a href="https://aftervision.github.io/Informazioni">Informazioni</a>-->
+					 <a href="https://calcetto.github.io/Contenuti">Informazioni</a>
+					 <a href="https://calcetto.github.io/Programmazione">Calendario</a>
+				</div>
+			</div>
+		
+
+			<div class="header"> 
+				
+				<img src="img/av.png" alt="logo" style="position: absolute; top: 4%; right: 5px;"> 
+				<h2 style="color: white; position: absolute; top: 5%; left: 45%">Torneo di calcetto</h2>
+				<div class="trasparenza"></div>
+				<div class="container"> 
+					<div onclick="openNav()">
+					 	<div class="icona"></div>
+					 	<div class="icona"></div>
+					 	<div class="icona"></div>
+					</div>
+				</div>
+			</div>
+
+			<script type="text/javascript">
+				/* Open when someone clicks on the span element */
+				function openNav() {
+				 document.getElementById("myNav").style.width = "350px";
+				}
+				function closeNav() {
+				 document.getElementById("myNav").style.width = "0%";
+				}
+			</script>
+
+
+			<!-- The overlay -->
+			<div id="Nav" class="o">
+				 <a href="javascript:void(0)" class="closeb" onclick="closeNa()">&times;</a>
+				 <div class="o-content">
+					 <!--VOTAZIONE DELLA SQUADRA DEL GIORNO-->
+				</div>
+			</div>
+
+
+
+			<!-- Use any element to open/show the overlay navigation menu -->
+			<div class="h">
+				<div class="t"></div>
+				<div class="c">
+					<div onclick="openNa()">
+						<div class="i" style="position: relative;"><p id="par"><b>VOTA LA SQUADRA CHE PREFERISCI</b></p></div>
+					</div>
+				</div>
+			</div>
+
+			<script type="text/javascript">
+			function openNa() {
+			 document.getElementById("Nav").style.width = "100%";
+			}
+			function closeNa() {
+			 document.getElementById("Nav").style.width = "0%";
+			}
+			</script>
+	
+		<footer align='center' style="color: white; position: fixed; top: 714px;left: 520px;">
+			<b>Copyright © Gaia Calamari, all rights reserved<b>
+		</footer>	
+</body>
+</html>

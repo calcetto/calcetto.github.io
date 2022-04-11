@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.timeline {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  box-sizing: border-box;
+  background: #0099FF;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.timeline:before {
+  position: absolute;
+  width: 4px;
+  height: calc(100% - 40px);
+  background: #FFF;
+  content: "";
+  left: calc(50% - 2px);
+}
+
+.timieline-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.timeline-content {
+  width: calc(50% - 70px);
+  padding: 20px;
+  background: #FFF;
+  position: relative;
+  left: 20px;
+  min-height: 100px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content:before {
+  width: 20px;
+  height: 20px;
+  content: "";
+  text-align: center;
+  font-weight: bold;
+  background: #FFF;
+  position: absolute;
+  right: -60px;
+  border-radius: 50%;
+  top: calc(50% - 10px);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content:after {
+  content: "";
+  left: 100%;
+  width: 50px;
+  border-top: 2px dashed #FFF;
+  position: absolute;
+  top: calc(50% - 1px);
+}
+
+.timeline-period {
+  left: calc(100% + 70px);
+  position: absolute;
+  display: inline-block;
+  background: #FFF;
+  padding: 10px;
+  white-space: nowrap;
+  border-radius: 10px;
+  top: calc(50% - 19px);
+  font-style: italic;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #666;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-period:before {
+  content: "";
+  left: -18px;
+  width: 6px;
+  border: 6px dashed transparent;
+  position: absolute;
+  top: calc(50% - 6px);
+  border-right: 6px solid #FFF;
+}
+
+@media screen and (min-width: 1024px) {
+  .timeline-content:nth-child(even) {
+    left: calc(50% + 50px);
+  }
+
+  .timeline-content:nth-child(even):before {
+    right: auto;
+    left: -60px;
+  }
+
+  .timeline-content:nth-child(even):after {
+    right: auto;
+    left: -50px;
+  }
+
+  .timeline-content:nth-child(even) .timeline-period {
+    right: calc(100% + 70px);
+    left: auto;
+  }
+
+  .timeline-content:nth-child(even) .timeline-period:before {
+    left: 100%;
+    border-right-color: transparent;
+    border-left-color: #FFF;
+  }
+}
